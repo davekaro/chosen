@@ -702,6 +702,8 @@ Copyright (c) 2011 by Harvest
           this.form_field.simulate("change");
         }
         return this.search_field_scale();
+      } else if (this.create_option) {
+        return this.select_create_option(this.search_field.value);
       }
     };
 

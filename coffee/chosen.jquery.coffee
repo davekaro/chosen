@@ -369,6 +369,8 @@ class Chosen extends AbstractChosen
 
       @form_field_jq.trigger "change"
       this.search_field_scale()
+    else if @create_option
+      this.select_create_option(@search_field.val())
 
   result_activate: (el) ->
     el.addClass("active-result")

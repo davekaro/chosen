@@ -347,6 +347,8 @@ class Chosen extends AbstractChosen
 
       @form_field.simulate("change") if typeof Event.simulate is 'function'
       this.search_field_scale()
+    else if @create_option
+      this.select_create_option(@search_field.value)
 
   result_activate: (el) ->
     el.addClassName("active-result")
